@@ -144,6 +144,7 @@ public class EnemyPassiveAggresive : MonoBehaviour {
 	}
 
 	void OnDisable(){
-		Destroy (msgMobText.gameObject);
+		if (msgMobText)
+			Destroy (msgMobText.gameObject);
 	}
 }

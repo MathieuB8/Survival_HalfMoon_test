@@ -8,8 +8,7 @@ public class RestartLevel : MonoBehaviour {
 	Button restartBtn;
 
 	void LoadOnClick(){
-		Debug.Log("heyy!");
-		SceneManager.LoadScene (0);
+		SceneManager.LoadScene (1);
 	}
 
 	void Awake () {

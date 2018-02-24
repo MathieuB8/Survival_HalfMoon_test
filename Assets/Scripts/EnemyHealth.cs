@@ -46,10 +46,10 @@ public class EnemyHealth : HealthSystem {
 			testHealthBar.enabled = false;
 			EnemyAggressiveComp.UpdateIsDieing ();
 			audio.Play();
-			yield return new WaitForSeconds(audio.clip.length);
 			if (player != null)
 				player.GetComponent<PlayerAttack> ().UpdateNumberEnemiesKilled ();
-			gameObject.SetActive(false); // can't destroy it right now because of the call UpdateNumberEnemiesKilled
+			yield return new WaitForSeconds(audio.clip.length);
+			gameObject.SetActive(false); // can't destroy it right now because of the call UpdateNumberEnemiesKilled*/
 		}	
 	}
 
@@ -81,9 +81,12 @@ public class EnemyHealth : HealthSystem {
 	}
 
 	void OnDisable(){
-		Destroy(testHealthBar.gameObject);
-		Destroy(bgHealthBar.gameObject);
-		Destroy(gameObject);
+		if (testHealthBar) 
+			Destroy(testHealthBar.gameObject);
+		if (bgHealthBar)
+			Destroy(bgHealthBar.gameObject);
+		if (gameObject)
+			Destroy(gameObject);
 	}
 
 	void Update(){

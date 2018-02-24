@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: b042d6598f296e24a9f11f18599d0ad0
+timeCreated: 1519474344
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Sweet Hipster
+  fontNames:
+  - Sweet Hipster
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
